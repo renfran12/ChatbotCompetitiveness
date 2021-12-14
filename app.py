@@ -1,7 +1,6 @@
 import flask
-import os
 import mysql.connector
-from flask import send_from_directory, request
+from flask import request
 
 mydb = mysql.connector.connect(
   host="b8tcabkum5dy8adidox0-mysql.services.clever-cloud.com",
