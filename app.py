@@ -66,17 +66,26 @@ def webhook():
             fulfillmentText = 'Intente de nuevo'
 
     elif query_result.get('action') =='Institucionalidad':
-        p1_1_institucionalidad = float(query_result.get('parameters').get('p1_1_institucionalidad'))
-        p1_institucionalidad = str(p1_1_institucionalidad)
+        p1_institucionalidad = str(query_result.get('parameters').get('p1_1_institucionalidad'))
+        p1_institucionalidad = p1_institucionalidad[1:]
         p2_institucionalidad = str(query_result.get('parameters').get('p2_institucionalidad'))
+        p2_institucionalidad = p2_institucionalidad[1:]
         p3_institucionalidad = str(query_result.get('parameters').get('p3_institucionalidad'))
+        p3_institucionalidad = p3_institucionalidad[1:]
         p4_institucionalidad = str(query_result.get('parameters').get('p4_institucionalidad'))
+        p4_institucionalidad = p4_institucionalidad[1:]
         p5_institucionalidad = str(query_result.get('parameters').get('p5_institucionalidad'))
+        p5_institucionalidad = p5_institucionalidad[1:]
         p6_institucionalidad = str(query_result.get('parameters').get('p6_institucionalidad'))
+        p6_institucionalidad = p6_institucionalidad[1:]
         p7_institucionalidad = str(query_result.get('parameters').get('p7_institucionalidad'))
+        p7_institucionalidad = p7_institucionalidad[1:]
         p8_institucionalidad = str(query_result.get('parameters').get('p8_institucionalidad'))
+        p8_institucionalidad = p8_institucionalidad[1:]
         p9_institucionalidad = str(query_result.get('parameters').get('p9_institucionalidad'))
+        p9_institucionalidad = p9_institucionalidad[1:]
         p10_institucionalidad = str(query_result.get('parameters').get('p10_institucionalidad'))
+        p10_institucionalidad = p10_institucionalidad[1:]
         try:
             mycursor = mydb.cursor()
 
@@ -109,17 +118,26 @@ def webhook():
             fulfillmentText = 'Intente de nuevo'
 
     elif query_result.get('action') =='Infraestructura':
-        p1_1_infraestructura = float(query_result.get('parameters').get('p1_1_infraestructura'))
-        p1_infraestructura = str(p1_1_infraestructura)
+        p1_infraestructura = str(query_result.get('parameters').get('p1_1_infraestructura'))
+        p1_infraestructura = p1_infraestructura[1:]
         p2_infraestructura = str(query_result.get('parameters').get('p2_infraestructura'))
+        p2_infraestructura = p2_infraestructura[1:]
         p3_infraestructura = str(query_result.get('parameters').get('p3_infraestructura'))
+        p3_infraestructura = p3_infraestructura[1:]
         p4_infraestructura = str(query_result.get('parameters').get('p4_infraestructura'))
+        p4_infraestructura = p4_infraestructura[1:]
         p5_infraestructura = str(query_result.get('parameters').get('p5_infraestructura'))
+        p5_infraestructura = p5_infraestructura[1:]
         p6_infraestructura = str(query_result.get('parameters').get('p6_infraestructura'))
+        p6_infraestructura = p6_infraestructura[1:]
         p7_infraestructura = str(query_result.get('parameters').get('p7_infraestructura'))
+        p7_infraestructura = p7_infraestructura[1:]
         p8_infraestructura = str(query_result.get('parameters').get('p8_infraestructura'))
+        p8_infraestructura = p8_infraestructura[1:]
         p9_infraestructura = str(query_result.get('parameters').get('p9_infraestructura'))
+        p9_infraestructura = p9_infraestructura[1:]
         p10_infraestructura = str(query_result.get('parameters').get('p10_infraestructura'))
+        p10_infraestructura = p10_infraestructura[1:]
         try:
             mycursor = mydb.cursor()
             sql = "INSERT INTO `Valor_completado` (`idIndicador`, `idStakeholder`, `idSesion`, `idItemEvaluacion`, `valor`) VALUES ('11', '72209978', '1', '11', %s)" % (p1_infraestructura)
